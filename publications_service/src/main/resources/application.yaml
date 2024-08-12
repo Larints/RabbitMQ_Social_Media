@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: publications_service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: quest
