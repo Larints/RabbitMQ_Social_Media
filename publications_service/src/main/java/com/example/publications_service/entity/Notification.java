@@ -5,35 +5,32 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "publications")
+@Table(name = "notifications")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Publication {
+public class Notification {
 
-    @Column(name = "publication_id")
     @Id
+    @Column(name = "notification_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String content;
 
-    private LocalDate publicationTime;
+    private LocalDate notificationTime;
+
+    private boolean notified;
+
+    private String notificationType;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-
-    private boolean notified;
-
-    private NotificationType notificationType;
-
-    public static enum NotificationType {
-        NEW_PUBLICATION, NEW_LIKE, NEW_COMMENT
-    }
 }

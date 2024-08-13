@@ -1,4 +1,4 @@
-package com.example.publications_service.entity;
+package com.example.subscriptions_service.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,9 +22,6 @@ public class User {
     private long id;
 
     private String email;
-
-    @OneToMany(mappedBy = "user")
-    private List<Publication> publications;
 
     @ManyToMany
     @JoinTable(

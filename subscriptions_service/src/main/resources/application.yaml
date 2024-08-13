@@ -1,10 +1,10 @@
 server:
-  port: 8088
+  port: 8085  # ???? ??? Notification Service
 spring:
   application:
-    name: common-library
+    name: subscriptions_service
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
-    password: quest
+    password: guest

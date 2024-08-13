@@ -1,3 +1,5 @@
+server:
+  port: 8084  # ???? ??? Notification Service
 spring:
   application:
     name: publications_service
@@ -5,4 +7,17 @@ spring:
     host: localhost
     port: 5672
     username: guest
-    password: quest
+    password: guest
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    h2:
+      console:
+        enabled: true
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+      database-platform: org.hibernate.dialect.H2Dialect
