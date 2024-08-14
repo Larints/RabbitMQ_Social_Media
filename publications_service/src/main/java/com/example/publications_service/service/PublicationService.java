@@ -37,27 +37,20 @@ public class PublicationService {
         // Сохраняем публикацию в базе данных
         publication = publicationRepository.save(publication);
         logger.info("Publication saved: {}", publication);
-        // Получаем пользователя и обновляем его список публикаций
-        User user = publication.getUser();
-        List<Publication> publications = user.getPublications();
-        if (publications == null) {
-            publications = new ArrayList<>();
-        }
-        publications.add(publication);
-        user.setPublications(publications);
-        userRepository.save(user);
-        logger.info("User saved: {}", user);
+
         // Создаем DTO и отправляем уведомление
         NotificationDTO notificationDTO = NotificationDTO.builder()
                 .id(publication.getId())
                 .content(publication.getContent())
                 .publicationTime(publication.getPublicationTime())
-                .userId(user.getId())
+                .userId(publication.getUser().getId())
                 .notified(false)
                 .notificationType(publication.getNotificationType().name())
                 .build();
-        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_NAME, RabbitMQConfig.ROUTING_KEY_PUBLICATIONS, notificationDTO);
+
+//        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_NAME, RabbitMQConfig.ROUTING_KEY_PUBLICATIONS, notificationDTO);
         logger.info("NotificationDTO send to queue: {}", RabbitMQConfig.NEW_PUBLICATIONS_QUEUE);
+
         return publication;
     }
 
@@ -78,6 +71,6 @@ public class PublicationService {
 //        logger.info("NotificationDTO received from queue: {}", notificationDTO);
 //        User user = userRepository.findById(notificationDTO.getUserId()).orElseThrow();
 //        user.setSubscriptions(notificationDTO.getSubscribers());
-//        logger.info("Used subscriptions updated", user);
+//        logger.info("Used subscriptions updated {}", user);
 //    }
 }

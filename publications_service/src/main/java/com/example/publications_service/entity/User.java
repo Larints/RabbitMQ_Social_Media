@@ -1,5 +1,7 @@
 package com.example.publications_service.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +26,7 @@ public class User {
     private String email;
 
     @OneToMany(mappedBy = "user")
+    @JsonManagedReference
     private List<Publication> publications;
 
     @ManyToMany
@@ -32,9 +35,11 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "subscribed_user_id")
     )
+    @JsonIgnore
     private List<User> subscriptions;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Notification> notifications;
 
 }

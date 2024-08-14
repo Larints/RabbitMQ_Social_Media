@@ -1,0 +1,28 @@
+2024-08-13 18:54:02 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.commonlibrary.CommonLibraryApplicationTests]: CommonLibraryApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-13 18:54:02 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.commonlibrary.CommonLibraryApplication for test class com.example.commonlibrary.CommonLibraryApplicationTests
+2024-08-13 18:54:02 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-13 18:54:03 [main] INFO  c.e.c.CommonLibraryApplicationTests - Starting CommonLibraryApplicationTests using Java 21.0.2 with PID 2276 (started by lagos in C:\Users\lagos\OneDrive\Рабочий стол\RabbitMQ_Social_Media\common-library)
+2024-08-13 18:54:03 [main] INFO  c.e.c.CommonLibraryApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 18:54:04 [main] INFO  c.e.c.configuration.RabbitMQConfig - Topic created social_media_exchange
+2024-08-13 18:54:04 [main] INFO  c.e.c.configuration.RabbitMQConfig - Queue created new_publications
+2024-08-13 18:54:04 [main] INFO  c.e.c.configuration.RabbitMQConfig - Subscriber queue created: subscriber_notifications
+2024-08-13 18:54:04 [main] INFO  c.e.c.configuration.RabbitMQConfig - Activity queue created: activity_queue
+2024-08-13 18:54:04 [main] INFO  c.e.c.configuration.RabbitMQConfig - Binding publications queue: Queue [name=new_publications, durable=true, autoDelete=false, exclusive=false, arguments={}, actualName=new_publications]
+2024-08-13 18:54:04 [main] INFO  c.e.c.configuration.RabbitMQConfig - Binding subscribers queue: Queue [name=subscriber_notifications, durable=true, autoDelete=false, exclusive=false, arguments={}, actualName=subscriber_notifications]
+2024-08-13 18:54:04 [main] INFO  c.e.c.configuration.RabbitMQConfig - Binding activity queue: Queue [name=activity_queue, durable=true, autoDelete=false, exclusive=false, arguments={}, actualName=activity_queue]
+2024-08-13 18:54:04 [main] INFO  c.e.c.configuration.RabbitMQConfig - Rabbit Template created: CachingConnectionFactory [channelCacheSize=25, addresses=[localhost:5672], active=true rabbitConnectionFactory]
+2024-08-13 18:54:04 [main] INFO  c.e.c.CommonLibraryApplicationTests - Started CommonLibraryApplicationTests in 1.977 seconds (process running for 2.855)
+2024-08-13 21:28:39 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.commonlibrary.CommonLibraryApplicationTests]: CommonLibraryApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-13 21:28:39 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.commonlibrary.CommonLibraryApplication for test class com.example.commonlibrary.CommonLibraryApplicationTests
+2024-08-13 21:28:39 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-13 21:28:39 [main] INFO  c.e.c.CommonLibraryApplicationTests - Starting CommonLibraryApplicationTests using Java 21.0.2 with PID 35108 (started by lagos in C:\Users\lagos\OneDrive\Рабочий стол\RabbitMQ_Social_Media\common-library)
+2024-08-13 21:28:39 [main] INFO  c.e.c.CommonLibraryApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 21:28:40 [main] INFO  c.e.c.configuration.RabbitMQConfig - Topic created social_media_exchange
+2024-08-13 21:28:40 [main] INFO  c.e.c.configuration.RabbitMQConfig - Queue created new_publications
+2024-08-13 21:28:40 [main] INFO  c.e.c.configuration.RabbitMQConfig - Subscriber queue created: subscriber_notifications
+2024-08-13 21:28:40 [main] INFO  c.e.c.configuration.RabbitMQConfig - Activity queue created: activity_queue
+2024-08-13 21:28:40 [main] INFO  c.e.c.configuration.RabbitMQConfig - Binding publications queue: Queue [name=new_publications, durable=true, autoDelete=false, exclusive=false, arguments={}, actualName=new_publications]
+2024-08-13 21:28:40 [main] INFO  c.e.c.configuration.RabbitMQConfig - Binding subscribers queue: Queue [name=subscriber_notifications, durable=true, autoDelete=false, exclusive=false, arguments={}, actualName=subscriber_notifications]
+2024-08-13 21:28:40 [main] INFO  c.e.c.configuration.RabbitMQConfig - Binding activity queue: Queue [name=activity_queue, durable=true, autoDelete=false, exclusive=false, arguments={}, actualName=activity_queue]
+2024-08-13 21:28:40 [main] INFO  c.e.c.configuration.RabbitMQConfig - Rabbit Template created: CachingConnectionFactory [channelCacheSize=25, addresses=[localhost:5672], active=true rabbitConnectionFactory]
+2024-08-13 21:28:41 [main] INFO  c.e.c.CommonLibraryApplicationTests - Started CommonLibraryApplicationTests in 1.831 seconds (process running for 2.702)
